@@ -61,12 +61,11 @@ const Portfolio = () => {
           <h1 className="text-4xl font-bold mb-2">Takuya Boehringer</h1>
           <p className="text-xl text-gray-600 mb-4">MS Mechanical Engineering at Columbia University</p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Welcome to my portfolio. I am a [your role] specializing in [your field]. 
-            My research interests include [interest 1], [interest 2], and [interest 3].
+            Welcome to my portfolio! I am a master's student specializing in robotics, passionate about it's many applications across industries.
+            I am particularly focused on robotic systems for aerospace applications such as in space or industrial manufacturing.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            I am currently [your current position] at [your institution/company]. 
-            My work focuses on [brief description of your work and its impact].
+            I am skilled in all disciplines that encompass robotics, from low-level control and mechatronics all the way to simulation and reinforcement learning.
           </p>
         </div>
       </div>
@@ -74,10 +73,10 @@ const Portfolio = () => {
       <div className="border-t border-gray-200 pt-8">
         <h2 className="text-2xl font-bold mb-4">Research Interests</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Research area 1</li>
-          <li>Research area 2</li>
-          <li>Research area 3</li>
-          <li>Research area 4</li>
+          <li>Space Robotics</li>
+          <li>Mobile Manipulation</li>
+          <li>Industrial Robotics</li>
+          <li>Teleoperation Systems</li>
         </ul>
       </div>
     </div>
@@ -206,7 +205,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="border-t border-gray-200 mt-16">
         <div className="max-w-6xl mx-auto px-4 py-6 text-center text-gray-600 text-sm">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} Takuya Boehringer. All rights reserved.
         </div>
       </footer>
     </div>
