@@ -32,21 +32,15 @@ const Portfolio = () => {
 
   const publications = [
     {
-      title: "Paper Title 1",
-      authors: "Your Name, Co-author 1, Co-author 2",
-      venue: "Conference/Journal Name 2024",
+      title: "Immersive Teleoperation Framework for Locomanipulation Tasks",
+      authors: "Takuya Boehringer, Jonathan Embley-Riches, Karim Hammoud, Valerio Modugno, Dimitrios Kanoulas",
+      venue: "IEEE CASE 2025",
       link: "#"
     },
     {
-      title: "Paper Title 2",
-      authors: "Co-author 1, Your Name, Co-author 2",
-      venue: "Conference/Journal Name 2023",
-      link: "#"
-    },
-    {
-      title: "Paper Title 3",
-      authors: "Your Name, Co-author 1",
-      venue: "Conference/Journal Name 2023",
+      title: "Analyzing spatio-temporal dynamics of dissolved oxygen for the River Thames using superstatistical methods and machine learning",
+      authors: "Hankun He, Takuya Boehringer, Benjamin Schaefer, Kate Heppell, Christian Beck",
+      venue: "Scientific Reports",
       link: "#"
     }
   ];
