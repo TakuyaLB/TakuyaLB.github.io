@@ -32,45 +32,70 @@ const Portfolio = () => {
 
   const publications = [
     {
-      title: "Immersive Teleoperation Framework for Locomanipulation Tasks",
-      authors: "Takuya Boehringer, Jonathan Embley-Riches, Karim Hammoud, Valerio Modugno, Dimitrios Kanoulas",
-      venue: "IEEE CASE 2025",
+      title: "Paper Title 1",
+      authors: "Your Name, Co-author 1, Co-author 2",
+      venue: "Conference/Journal Name 2024",
       link: "#"
     },
     {
-      title: "Analyzing spatio-temporal dynamics of dissolved oxygen for the River Thames using superstatistical methods and machine learning",
-      authors: "Hankun He, Takuya Boehringer, Benjamin Schaefer, Kate Heppell, Christian Beck",
-      venue: "Scientific Reports",
+      title: "Paper Title 2",
+      authors: "Co-author 1, Your Name, Co-author 2",
+      venue: "Conference/Journal Name 2023",
+      link: "#"
+    },
+    {
+      title: "Paper Title 3",
+      authors: "Your Name, Co-author 1",
+      venue: "Conference/Journal Name 2023",
       link: "#"
     }
   ];
 
   const renderHome = () => (
-    <div className="max-w-4xl">
-      <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
-        <div className="w-48 h-48 bg-gray-200 rounded-lg flex-shrink-0 overflow-hidden">
+    <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col items-center text-center mb-12">
+        <div className="w-48 h-48 bg-gray-200 rounded-lg overflow-hidden mb-6">
           <img src="/images/profile.jpg" alt="Your Name" className="w-full h-full object-cover" />
         </div>
-        <div>
-          <h1 className="text-4xl font-bold mb-2">Takuya Boehringer</h1>
-          <p className="text-xl text-gray-600 mb-4">MS Mechanical Engineering at Columbia University</p>
+        
+        {/* Social Links under image */}
+        <div className="flex items-center gap-4 mb-6">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+            <Linkedin size={24} />
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
+            <Github size={24} />
+          </a>
+          <a href="https://scholar.google.com/citations?user=yourID" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+            <BookOpen size={24} />
+          </a>
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600">
+            <FileText size={24} />
+          </a>
+        </div>
+
+        <h1 className="text-4xl font-bold mb-2">Your Name</h1>
+        <p className="text-xl text-gray-600 mb-6">Your Title/Position</p>
+        
+        <div className="max-w-3xl text-left">
           <p className="text-gray-700 leading-relaxed mb-4">
-            Welcome to my portfolio! I am a master's student specializing in robotics, passionate about it's many applications across industries.
-            I am particularly focused on robotic systems for aerospace applications such as in space or industrial manufacturing.
+            Welcome to my portfolio. I am a [your role] specializing in [your field]. 
+            My research interests include [interest 1], [interest 2], and [interest 3].
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            I am skilled in all disciplines that encompass robotics, from low-level control and mechatronics all the way to simulation and reinforcement learning.
+          <p className="text-gray-700 leading-relaxed mb-8">
+            I am currently [your current position] at [your institution/company]. 
+            My work focuses on [brief description of your work and its impact].
           </p>
         </div>
       </div>
       
-      <div className="border-t border-gray-200 pt-8">
+      <div className="border-t border-gray-200 pt-8 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Research Interests</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
           <li>Space Robotics</li>
-          <li>Mobile Manipulation</li>
-          <li>Industrial Robotics</li>
-          <li>Teleoperation Systems</li>
+          <li>Robotic Manipulation</li>
+          <li>Reinforcement Learning</li>
+          <li>Motion Planning</li>
         </ul>
       </div>
     </div>
@@ -147,43 +172,25 @@ const Portfolio = () => {
       {/* Header */}
       <header className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-8">
-              <button 
-                onClick={() => setCurrentPage('home')}
-                className={`font-medium ${currentPage === 'home' ? 'text-blue-600' : 'text-gray-700 hover:text-gray-900'}`}
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => setCurrentPage('projects')}
-                className={`font-medium ${currentPage === 'projects' || currentPage === 'project-detail' ? 'text-blue-600' : 'text-gray-700 hover:text-gray-900'}`}
-              >
-                Projects
-              </button>
-              <button 
-                onClick={() => setCurrentPage('publications')}
-                className={`font-medium ${currentPage === 'publications' ? 'text-blue-600' : 'text-gray-700 hover:text-gray-900'}`}
-              >
-                Publications
-              </button>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              <a href="https://www.linkedin.com/in/takuya-boehringer/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://github.com/TakuyaLB" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
-                <Github size={20} />
-              </a>
-              <a href="https://scholar.google.com/citations?user=Cj-m--kAAAAJ&hl=de&oi=ao" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                <BookOpen size={20} />
-              </a>
-              <a href="cv.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600">
-                <FileText size={20} />
-              </a>
-            </div>
+          <nav className="flex items-center justify-center space-x-8">
+            <button 
+              onClick={() => setCurrentPage('home')}
+              className={`font-medium ${currentPage === 'home' ? 'text-blue-600' : 'text-gray-700 hover:text-gray-900'}`}
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => setCurrentPage('projects')}
+              className={`font-medium ${currentPage === 'projects' || currentPage === 'project-detail' ? 'text-blue-600' : 'text-gray-700 hover:text-gray-900'}`}
+            >
+              Projects
+            </button>
+            <button 
+              onClick={() => setCurrentPage('publications')}
+              className={`font-medium ${currentPage === 'publications' ? 'text-blue-600' : 'text-gray-700 hover:text-gray-900'}`}
+            >
+              Publications
+            </button>
           </nav>
         </div>
       </header>
@@ -199,7 +206,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="border-t border-gray-200 mt-16">
         <div className="max-w-6xl mx-auto px-4 py-6 text-center text-gray-600 text-sm">
-          © {new Date().getFullYear()} Takuya Boehringer. All rights reserved.
+          © {new Date().getFullYear()} Your Name. All rights reserved.
         </div>
       </footer>
     </div>
