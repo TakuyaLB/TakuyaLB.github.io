@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, BookOpen, FileText } from "lucide-react";
 
 const Portfolio = () => {
@@ -30,6 +31,28 @@ const Portfolio = () => {
         "Detailed description of project 3. Explain the context, your role, and the outcomes.",
       image: "/images/project3.jpg",
     },
+    // Add extra dummy projects for scrolling
+    {
+      id: 4,
+      title: "Project Title 4",
+      description: "Brief description of project 4",
+      fullDescription: "Full description of project 4",
+      image: "/images/project1.jpg",
+    },
+    {
+      id: 5,
+      title: "Project Title 5",
+      description: "Brief description of project 5",
+      fullDescription: "Full description of project 5",
+      image: "/images/project2.jpg",
+    },
+    {
+      id: 6,
+      title: "Project Title 6",
+      description: "Brief description of project 6",
+      fullDescription: "Full description of project 6",
+      image: "/images/project3.jpg",
+    },
   ];
 
   const publications = [
@@ -45,105 +68,162 @@ const Portfolio = () => {
       venue: "Conference / Journal 2023",
       link: "#",
     },
+    {
+      title: "Paper Title 3",
+      authors: "Your Name",
+      venue: "Conference / Journal 2022",
+      link: "#",
+    },
   ];
 
   /* ---------------- HOME ---------------- */
+  const renderHome = () => {
+    const itemVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: (i = 1) => ({
+        opacity: 1,
+        y: 0,
+        transition: { delay: i * 0.15, duration: 0.5 },
+      }),
+    };
 
-  const renderHome = () => (
-    <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
-      {/* Profile image */}
-      <div className="w-20 h-20 md:w-24 md:h-24 rounded-md overflow-hidden mb-4">
-        <img
-          src="/images/profile.jpg"
-          alt="Your Name"
-          className="w-full h-full object-cover"
+    return (
+      <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
+        <motion.div
+          custom={0}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-[200px] md:max-w-[240px] rounded-lg overflow-hidden mb-4"
+        >
+          <img
+            src="/images/profile.jpg"
+            alt="Your Name"
+            className="w-full h-auto object-cover"
+          />
+        </motion.div>
+
+        <motion.div
+          custom={1}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex gap-4 mb-4"
+        >
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-blue-600 transition-transform duration-200 transform hover:scale-110"
+          >
+            <Linkedin size={18} />
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-gray-900 transition-transform duration-200 transform hover:scale-110"
+          >
+            <Github size={18} />
+          </a>
+          <a
+            href="https://scholar.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-blue-600 transition-transform duration-200 transform hover:scale-110"
+          >
+            <BookOpen size={18} />
+          </a>
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-red-600 transition-transform duration-200 transform hover:scale-110"
+          >
+            <FileText size={18} />
+          </a>
+        </motion.div>
+
+        <motion.h1
+          custom={2}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-2xl md:text-3xl font-semibold mb-1"
+        >
+          Your Name
+        </motion.h1>
+
+        <motion.p
+          custom={3}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-gray-600 mb-6"
+        >
+          Your Title / Position
+        </motion.p>
+
+        <motion.div
+          custom={4}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-left text-gray-700 leading-relaxed mb-8"
+        >
+          <p className="mb-4">
+            Welcome to my portfolio. I am a [your role] specializing in
+            [your field].
+          </p>
+          <p>
+            I am currently [your current position] at [your institution/company].
+            My work focuses on [brief description of your work and its impact].
+          </p>
+        </motion.div>
+
+        <motion.div
+          custom={5}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="w-full border-t border-gray-200 mb-6"
         />
-      </div>
 
-      {/* Social icons */}
-      <div className="flex gap-4 mb-4">
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-blue-600"
+        <motion.div
+          custom={6}
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="w-full flex flex-col items-center"
         >
-          <Linkedin size={18} />
-        </a>
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-gray-900"
-        >
-          <Github size={18} />
-        </a>
-        <a
-          href="https://scholar.google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-blue-600"
-        >
-          <BookOpen size={18} />
-        </a>
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-red-600"
-        >
-          <FileText size={18} />
-        </a>
+          <h2 className="text-lg font-semibold mb-3">Research Interests</h2>
+          <ul className="list-disc list-inside space-y-1 text-gray-700 text-left">
+            <li>Space Robotics</li>
+            <li>Robotic Manipulation</li>
+            <li>Reinforcement Learning</li>
+            <li>Motion Planning</li>
+          </ul>
+        </motion.div>
       </div>
-
-      {/* Name / title */}
-      <h1 className="text-2xl md:text-3xl font-semibold mb-1">
-        Your Name
-      </h1>
-      <p className="text-gray-600 mb-6">Your Title / Position</p>
-
-      {/* Bio */}
-      <div className="text-left text-gray-700 leading-relaxed mb-8">
-        <p className="mb-4">
-          Welcome to my portfolio. I am a [your role] specializing in
-          [your field]. My research interests include [interest 1],
-          [interest 2], and [interest 3].
-        </p>
-        <p>
-          I am currently [your current position] at [your
-          institution/company]. My work focuses on [brief description of
-          your work and its impact].
-        </p>
-      </div>
-
-      {/* Divider */}
-      <div className="w-full border-t border-gray-200 mb-6" />
-
-      {/* Research interests */}
-      <div className="w-full flex flex-col items-center">
-        <h2 className="text-lg font-semibold mb-3">
-          Research Interests
-        </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-700 text-left">
-          <li>Space Robotics</li>
-          <li>Robotic Manipulation</li>
-          <li>Reinforcement Learning</li>
-          <li>Motion Planning</li>
-        </ul>
-      </div>
-    </div>
-  );
+    );
+  };
 
   /* ---------------- PROJECTS ---------------- */
-
   const renderProjects = () => (
-    <div className="max-w-5xl mx-auto">
+    <motion.div
+      key="projects"
+      className="max-w-5xl mx-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1 className="text-2xl font-semibold mb-6">Projects</h1>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="border rounded-lg overflow-hidden hover:shadow-md transition cursor-pointer"
+            className="border rounded-lg overflow-hidden hover:shadow-md transition cursor-pointer h-[250px] md:h-[280px] flex flex-col"
             onClick={() => {
               setSelectedProject(project);
               setCurrentPage("project-detail");
@@ -152,22 +232,55 @@ const Portfolio = () => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-40 object-cover"
+              className="w-full h-40 object-cover flex-shrink-0"
             />
-            <div className="p-4">
+            <div className="p-4 flex-1">
               <h3 className="font-semibold mb-1">{project.title}</h3>
-              <p className="text-sm text-gray-600">
-                {project.description}
-              </p>
+              <p className="text-sm text-gray-600">{project.description}</p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 
+  /* ---------------- PUBLICATIONS ---------------- */
+  const renderPublications = () => (
+    <motion.div
+      key="publications"
+      className="max-w-3xl mx-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h1 className="text-2xl font-semibold mb-6">Publications</h1>
+      <div className="space-y-4">
+        {publications.map((pub, i) => (
+          <a
+            key={i}
+            href={pub.link}
+            className="block border rounded-lg p-4 hover:shadow-lg transition transform hover:scale-105"
+          >
+            <h3 className="font-semibold text-blue-600 hover:text-blue-800">
+              {pub.title}
+            </h3>
+            <p className="text-sm text-gray-700">{pub.authors}</p>
+            <p className="text-sm text-gray-500 italic">{pub.venue}</p>
+          </a>
+        ))}
+      </div>
+    </motion.div>
+  );
+
+  /* ---------------- PROJECT DETAIL ---------------- */
   const renderProjectDetail = () => (
-    <div className="max-w-3xl mx-auto">
+    <motion.div
+      className="max-w-3xl mx-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+    >
       <button
         onClick={() => {
           setSelectedProject(null);
@@ -178,9 +291,7 @@ const Portfolio = () => {
         ← Back to Projects
       </button>
 
-      <h1 className="text-2xl font-semibold mb-4">
-        {selectedProject.title}
-      </h1>
+      <h1 className="text-2xl font-semibold mb-4">{selectedProject.title}</h1>
 
       <img
         src={selectedProject.image}
@@ -191,53 +302,28 @@ const Portfolio = () => {
       <p className="text-gray-700 leading-relaxed">
         {selectedProject.fullDescription}
       </p>
-    </div>
-  );
-
-  /* ---------------- PUBLICATIONS ---------------- */
-
-  const renderPublications = () => (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-6">
-        Publications
-      </h1>
-      <div className="space-y-4">
-        {publications.map((pub, i) => (
-          <div key={i} className="border-b pb-3">
-            <a
-              href={pub.link}
-              className="font-semibold text-blue-600 hover:text-blue-800"
-            >
-              {pub.title}
-            </a>
-            <p className="text-sm text-gray-700">{pub.authors}</p>
-            <p className="text-sm text-gray-500 italic">
-              {pub.venue}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
+    </motion.div>
   );
 
   /* ---------------- LAYOUT ---------------- */
-
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      {/* Header */}
-      <header className="border-b">
-        <nav className="max-w-5xl mx-auto px-4 py-3 flex justify-center gap-8">
+      {/* Sticky header */}
+      <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
+        <nav className="max-w-5xl mx-auto px-6 py-4 flex justify-center gap-12">
           {["home", "projects", "publications"].map((page) => (
             <button
               key={page}
               onClick={() => setCurrentPage(page)}
-              className={`text-sm font-medium ${
+              className={`relative text-lg font-medium ${
                 currentPage === page ||
-                (page === "projects" &&
-                  currentPage === "project-detail")
+                (page === "projects" && currentPage === "project-detail")
                   ? "text-blue-600"
-                  : "text-gray-700 hover:text-gray-900"
-              }`}
+                  : "text-gray-700 hover:text-black"
+              } transition-colors duration-200
+                after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
+                after:origin-left after:scale-x-0 after:bg-black after:transition-transform
+                after:duration-300 hover:after:scale-x-100`}
             >
               {page.charAt(0).toUpperCase() + page.slice(1)}
             </button>
@@ -245,15 +331,16 @@ const Portfolio = () => {
         </nav>
       </header>
 
-      {/* Main */}
+      {/* Main content */}
       <main className="flex-1 px-4 py-10">
-        {currentPage === "home" && renderHome()}
-        {currentPage === "projects" && renderProjects()}
-        {currentPage === "project-detail" && renderProjectDetail()}
-        {currentPage === "publications" && renderPublications()}
+        <AnimatePresence mode="wait">
+          {currentPage === "home" && renderHome()}
+          {currentPage === "projects" && !selectedProject && renderProjects()}
+          {currentPage === "project-detail" && selectedProject && renderProjectDetail()}
+          {currentPage === "publications" && renderPublications()}
+        </AnimatePresence>
       </main>
 
-      {/* Footer */}
       <footer className="border-t text-center text-xs text-gray-600 py-4">
         © {new Date().getFullYear()} Your Name. All rights reserved.
       </footer>
