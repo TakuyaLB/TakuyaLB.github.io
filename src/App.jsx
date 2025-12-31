@@ -52,7 +52,7 @@ const Portfolio = () => {
   const renderHome = () => (
     <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
       {/* Profile image */}
-      <div className="w-28 h-28 md:w-32 md:h-32 rounded-lg overflow-hidden mb-4">
+      <div className="w-20 h-20 md:w-24 md:h-24 rounded-md overflow-hidden mb-4">
         <img
           src="/images/profile.jpg"
           alt="Your Name"
@@ -120,11 +120,11 @@ const Portfolio = () => {
       <div className="w-full border-t border-gray-200 mb-6" />
 
       {/* Research interests */}
-      <div className="w-full text-left">
+      <div className="w-full flex flex-col items-center">
         <h2 className="text-lg font-semibold mb-3">
           Research Interests
         </h2>
-        <ul className="list-disc list-inside space-y-1 text-gray-700">
+        <ul className="list-disc list-inside space-y-1 text-gray-700 text-left">
           <li>Space Robotics</li>
           <li>Robotic Manipulation</li>
           <li>Reinforcement Learning</li>
