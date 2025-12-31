@@ -31,26 +31,26 @@ const Portfolio = () => {
         "Detailed description of project 3. Explain the context, your role, and the outcomes.",
       image: "/images/project3.jpg",
     },
-    // Add extra dummy projects for scrolling
+    // add more dummy projects to test scrolling
     {
       id: 4,
       title: "Project Title 4",
       description: "Brief description of project 4",
-      fullDescription: "Full description of project 4",
+      fullDescription: "Detailed description of project 4",
       image: "/images/project1.jpg",
     },
     {
       id: 5,
       title: "Project Title 5",
       description: "Brief description of project 5",
-      fullDescription: "Full description of project 5",
+      fullDescription: "Detailed description of project 5",
       image: "/images/project2.jpg",
     },
     {
       id: 6,
       title: "Project Title 6",
       description: "Brief description of project 6",
-      fullDescription: "Full description of project 6",
+      fullDescription: "Detailed description of project 6",
       image: "/images/project3.jpg",
     },
   ];
@@ -66,12 +66,6 @@ const Portfolio = () => {
       title: "Paper Title 2",
       authors: "Co-author 1, Your Name",
       venue: "Conference / Journal 2023",
-      link: "#",
-    },
-    {
-      title: "Paper Title 3",
-      authors: "Your Name",
-      venue: "Conference / Journal 2022",
       link: "#",
     },
   ];
@@ -114,7 +108,7 @@ const Portfolio = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-blue-600 transition-transform duration-200 transform hover:scale-110"
+            className="text-gray-500 hover:text-blue-600 transition-transform transform hover:scale-125 duration-200"
           >
             <Linkedin size={18} />
           </a>
@@ -122,7 +116,7 @@ const Portfolio = () => {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-900 transition-transform duration-200 transform hover:scale-110"
+            className="text-gray-500 hover:text-gray-900 transition-transform transform hover:scale-125 duration-200"
           >
             <Github size={18} />
           </a>
@@ -130,7 +124,7 @@ const Portfolio = () => {
             href="https://scholar.google.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-blue-600 transition-transform duration-200 transform hover:scale-110"
+            className="text-gray-500 hover:text-blue-600 transition-transform transform hover:scale-125 duration-200"
           >
             <BookOpen size={18} />
           </a>
@@ -138,7 +132,7 @@ const Portfolio = () => {
             href="/cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-red-600 transition-transform duration-200 transform hover:scale-110"
+            className="text-gray-500 hover:text-red-600 transition-transform transform hover:scale-125 duration-200"
           >
             <FileText size={18} />
           </a>
@@ -261,9 +255,7 @@ const Portfolio = () => {
             href={pub.link}
             className="block border rounded-lg p-4 hover:shadow-lg transition transform hover:scale-105"
           >
-            <h3 className="font-semibold text-blue-600 hover:text-blue-800">
-              {pub.title}
-            </h3>
+            <h3 className="font-semibold">{pub.title}</h3>
             <p className="text-sm text-gray-700">{pub.authors}</p>
             <p className="text-sm text-gray-500 italic">{pub.venue}</p>
           </a>
