@@ -89,29 +89,6 @@ const Portfolio = () => {
             />
           </div>
 
-          <motion.div
-            custom={1}
-            variants={itemVariants}
-            className="flex gap-4 mb-4"
-          >
-            {[
-              { icon: Linkedin, href: "https://www.linkedin.com/in/takuya-boehringer/" },
-              { icon: Github, href: "https://github.com/TakuyaLB" },
-              { icon: BookOpen, href: "https://scholar.google.com/citations?user=Cj-m--kAAAAJ&hl=de&oi=ao" },
-              { icon: FileText, href: "/Takuya_CV.pdf" },
-            ].map(({ icon: Icon, href }, i) => (
-              <a
-                key={i}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-black transition-transform hover:scale-125"
-              >
-                <Icon size={24} />
-              </a>
-            ))}
-          </motion.div>
-
           <motion.h1
             custom={2}
             variants={itemVariants}
@@ -127,6 +104,53 @@ const Portfolio = () => {
           >
             MS Mechanical Engineering Student at Columbia University
           </motion.p>
+
+          <motion.div
+            custom={4}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-col gap-3 mt-2"
+          >
+            {[
+              {
+                icon: Linkedin,
+                label: "LinkedIn",
+                href: "https://linkedin.com",
+                hover: "hover:text-blue-600",
+              },
+              {
+                icon: Github,
+                label: "GitHub",
+                href: "https://github.com/TakuyaLB",
+                hover: "hover:text-gray-900",
+              },
+              {
+                icon: BookOpen,
+                label: "Google Scholar",
+                href: "https://scholar.google.com/citations?user=Cj-m--kAAAAJ&hl=de&oi=ao",
+                hover: "hover:text-blue-600",
+              },
+              {
+                icon: FileText,
+                label: "CV",
+                href: "/Takuya_CV.pdf",
+                hover: "hover:text-red-600",
+              },
+            ].map(({ icon: Icon, label, href, hover }, i) => (
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center gap-3 text-gray-600 transition-colors ${hover}`}
+              >
+                <Icon size={20} />
+                <span className="text-sm font-medium">{label}</span>
+              </a>
+            ))}
+          </motion.div>
+
         </motion.div>
 
         {/* Right column */}
