@@ -36,7 +36,7 @@ const Portfolio = () => {
       image: "/images/crawler.jpeg",
       youtubeId: "ApJUsBR98f8", // 👈 replace
       //codeLink: "https://github.com/yourname/project1",
-      //docsLink: "https://yourdomain.com/project1-docs",
+      docsLink: "/crawler_logs.pdf",
       //paperPdf: "/papers/project1.pdf", // 👈 NEW
     },
     {
