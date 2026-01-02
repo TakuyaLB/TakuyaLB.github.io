@@ -116,7 +116,7 @@ const Portfolio = () => {
               {
                 icon: Linkedin,
                 label: "LinkedIn",
-                href: "https://linkedin.com",
+                href: "https://www.linkedin.com/in/takuya-boehringer/",
                 hover: "hover:text-blue-600",
               },
               {
