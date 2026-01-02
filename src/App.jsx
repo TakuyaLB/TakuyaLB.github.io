@@ -135,6 +135,20 @@ const Portfolio = () => {
           variants={itemVariants}
           className="text-gray-700 leading-relaxed"
         >
+          {/* ---- AFFILIATION LOGOS ---- */}
+          <div className="flex justify-center items-center gap-12 mb-8">
+            <img
+              src="/images/rpl-logo.png"
+              alt="UCL Robotics and Perception Lab"
+              className="h-24 md:h-32 lg:h-36 max-w-[340px] object-contain"
+            />
+            <img
+              src="/images/columbia_engineering_logo.jpg"
+              alt="Columbia Engineering"
+              className="h-24 md:h-32 lg:h-36 max-w-[340px] object-contain"
+            />
+          </div>
+
           <p className="mb-4">
             Welcome to my portfolio! I am a mechanical engineering master's student at Columbia University, on the robotics and control track.
           </p>
@@ -151,7 +165,7 @@ const Portfolio = () => {
               <li>Space Robotics</li>
               <li>Robotic Manipulation</li>
               <li>Reinforcement Learning</li>
-              <li>Motion Planning</li>
+              <li>Simulation</li>
             </ul>
           </div>
         </motion.div>
