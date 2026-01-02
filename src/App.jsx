@@ -6,6 +6,27 @@ const Portfolio = () => {
   const [currentPage, setCurrentPage] = useState("home");
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const featuredWork = [
+    {
+      id: 1,
+      title: "Legged Robotics",
+      image: "/work/crawler_exploded.png",
+      projectId: 1,
+    },
+    {
+      id: 2,
+      title: "VR Teleoperation",
+      image: "/work/VR_teleop_interface.png",
+      projectId: 3,
+    },
+    {
+      id: 3,
+      title: "Advanced Manufacturing",
+      image: "/work/ECM_schematic.png",
+      projectId: 2,
+    },
+  ];
+
   const projects = [
     {
       id: 1,
@@ -180,6 +201,46 @@ const Portfolio = () => {
           <p>
             My background is in computer science, having worked on teleoperation systems and with experience in machine learning. However, my skills now encompass a much broader spectrum of the field of robotics, from mechanical design, mechatronics and control all the way up to simulation and reinforcement learning. I am specifically interested in the applications of robotics in aerospace contexts, from robotic cells in aerospace manufacturing to systems designed for space missions such as space-specific manipulators and lunar rovers.
           </p>
+
+          <div className="w-full border-t border-gray-200 my-6" />
+          
+          {/* Selected Work */}
+          <motion.div
+            custom={5}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            className="mt-8"
+          >
+            <h2 className="text-lg font-semibold mb-4">Selected Work</h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {featuredWork.map((work) => (
+                <div
+                  key={work.id}
+                  onClick={() => {
+                    setSelectedProject(
+                      projects.find((p) => p.id === work.projectId)
+                    );
+                    setCurrentPage("project-detail");
+                  }}
+                  className="group cursor-pointer overflow-hidden rounded-lg border hover:shadow-md transition"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={work.image}
+                      alt={work.title}
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  <div className="p-2 text-sm text-gray-700 font-medium">
+                    {work.title}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
           <div className="w-full border-t border-gray-200 my-6" />
 
