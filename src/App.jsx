@@ -98,7 +98,7 @@ const Portfolio = () => {
               { icon: Linkedin, href: "https://www.linkedin.com/in/takuya-boehringer/" },
               { icon: Github, href: "https://github.com/TakuyaLB" },
               { icon: BookOpen, href: "https://scholar.google.com/citations?user=Cj-m--kAAAAJ&hl=de&oi=ao" },
-              { icon: FileText, href: "/cv.pdf" },
+              { icon: FileText, href: "/Takuya_CV.pdf" },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
