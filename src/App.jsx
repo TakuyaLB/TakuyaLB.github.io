@@ -32,7 +32,7 @@ const Portfolio = () => {
       id: 1,
       title: "The Crawler",
       description: "Robotic Studio Project",
-      fullDescription: "This was our submission for the Fall 2025 iteration of Professor Hod Lipson's Robotic Studio class. We were provided with a servo kit and given complete design freedom to design and make any legged robot. We decided on a spider-like design, using two arms, each with a klann linkage driving a legged geartrain. We went for the extra credit on this project, using MuJoCo simulation and reinforcment learning to get the robot to crabwalk without using the geartrain. Check out the journey video below to see the results!",
+      fullDescription: "This was our submission for the Fall 2025 iteration of Professor Hod Lipson's Robotic Studio class. We were provided with a servo kit and given complete design freedom to design and make any legged robot. We decided on a spider-like design, using two arms, each with a klann linkage driving a legged geartrain. We went for the extra credit on this project, using MuJoCo simulation and reinforcement learning to get the robot to crabwalk without using the geartrain. Check out the journey video below to see the results!",
       image: "/images/crawler.jpeg",
       youtubeId: "ApJUsBR98f8", // 👈 replace
       codeLink: "https://github.com/TakuyaLB/Crawler_code",
