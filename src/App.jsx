@@ -41,16 +41,6 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: "ECM Machine",
-      description: "Advanced Manufacturing Project",
-      fullDescription: "Team project to design and build a 1 dimensional ECM machine, using electrolysis to drill into aluminum workpieces. I focused on designing the stepper motor circuit on KiCAD, using an Arduino to move the tool at a calculated material removal rate. This also involved implemented safety protocols including an E-stop, fusing strategy and power supply bench validation.",
-      image: "/images/ECM_machine.jpg",
-      codeLink: "https://github.com/TakuyaLB/Advanced-Manufacturing-ECM/tree/main",
-      docsLink: "https://docs.google.com/document/d/17x1_j_-dw3UFRonSccUwcB03QhM848My/edit?usp=sharing&ouid=100379280498855417303&rtpof=true&sd=true",
-      //paperPdf: "/papers/project1.pdf", // 👈 NEW
-    },
-    {
-      id: 3,
       title: "VR Teleoperation Framework",
       description: "IEEE CASE 2025 Publication",
       fullDescription: "This was a full framework for robotic teleoperation on systems designed for both locomotion and manipulation (loco-manipulation). The physical setup we used consisted of an Emika Franka manipulator attached to a Summit-XL mobile base, all controlled from a PC via Meta Quest 2 VR headset. After using a standard interface to drive the base to the site of the manipulation task, the manipulator uses the camera on the end effector to take pictures of the scene from various angles, sending the images with their respective camera positions to the PC. The PC uses these to generate a gaussian splat (3D model) of the scene. This 3D model and a URDF of the manipulator are exported into the Unity VR interface which the user interacts with via the Meta Quest 2. The user uses the novel VR interface to teleoperate the Franka arm via the one-to-one scene reconstruction in Unity. This effectiveness of this system was verified via numerous tests and a thorough user study. There is much room for future expansion, mostly in speeding up the model generation to real-time and applying this system to other setups such as a quadruped-based systems.",
@@ -61,7 +51,28 @@ const Portfolio = () => {
       paperPdf: "https://arxiv.org/pdf/2504.15229", // 👈 NEW
     },
     {
+      id: 3,
+      title: "Autonomous Robotic-Arm Docking System for Spacecraft",
+      description: "Intro to Human Spaceflight Project",
+      fullDescription: "As space becomes more industrialized, Spacecraft docking remains one of the most precision-demanding operations in human spaceflight, traditionally relying on autonomous guidance, navigation, and control (GNC) systems that consume significant propellant and offer limited abort authority. This paper presents the design and development of an autonomous robotic-arm docking system intended to complement, not replace, the NASA International Docking System Standard (IDSS). Building on the heritage of the Androgynous Peripheral Attach System (APAS) and the Low Impact Docking System (LIDS), the proposed system introduces a Revolute-Prismatic-Revolute (RPR) manipulator arm mounted to the docking port of the host spacecraft, capable of capturing and aligning an approaching vehicle with enhanced control authority and reduced propellant dependence. The system integrates the novel application of safety-constrained reinforcement learning trained in NVIDIA Isaac Sim to achieve robust, adaptive docking behavior transferable from simulation to physical hardware. A prototype implementation using NEMA 17 stepper motors, LX-16A bus servos, a linear actuator, and a Teensy 4.0 serves as the experimental testbed. Results from simulation training demonstrate convergent reward accumulation, validating the reinforcement learning approach prior to hardware deployment. This work addresses critical gaps in current docking infrastructure, including safe abort capability, compatibility across emerging commercial platforms, and reduced reliance on spacecraft GNC during terminal approach.",
+      image: "/images/ADSS_CAD.png",
+      youtubeId: "/shorts/N9cWFjqj4js",
+      //codeLink: "https://github.com/RPL-CS-UCL/unity_meta_quest_ros",
+      docsLink: "/AERO4810_ADSS.pdf",
+      //paperPdf: "https://arxiv.org/pdf/2504.15229", // 👈 NEW
+    },
+    {
       id: 4,
+      title: "ECM Machine",
+      description: "Advanced Manufacturing Project",
+      fullDescription: "Team project to design and build a 1 dimensional ECM machine, using electrolysis to drill into aluminum workpieces. I focused on designing the stepper motor circuit on KiCAD, using an Arduino to move the tool at a calculated material removal rate. This also involved implemented safety protocols including an E-stop, fusing strategy and power supply bench validation.",
+      image: "/images/ECM_machine.jpg",
+      codeLink: "https://github.com/TakuyaLB/Advanced-Manufacturing-ECM/tree/main",
+      docsLink: "https://docs.google.com/document/d/17x1_j_-dw3UFRonSccUwcB03QhM848My/edit?usp=sharing&ouid=100379280498855417303&rtpof=true&sd=true",
+      //paperPdf: "/papers/project1.pdf", // 👈 NEW
+    },
+    {
+      id: 5,
       title: "Pollution Machine Learning",
       description: "Scientific Reports Publication",
       fullDescription: "This project was on using superstatistics and interpretable machine learning to investigate pollution in the river Thames, collaborating with Dr Benjamin Schaefer at the Karlsruhe Institute of Technology. We used dissolved oxygen levels as our pollution statistic, using gradient-boosting trees and SHAP values for interpretability and transformers for forecasting. I focused on the interpretability aspect of this project, attempting many different frameworks and methods before settling on the Light Gradient Boosting Machine for regression and SHapley Additive exPlanations to find feature importances.",
