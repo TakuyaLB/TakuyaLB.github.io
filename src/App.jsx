@@ -17,13 +17,13 @@ const Portfolio = () => {
       id: 2,
       title: "VR Teleoperation",
       image: "/work/VR_teleop_interface.png",
-      projectId: 3,
+      projectId: 2,
     },
     {
       id: 3,
       title: "Space Robotics",
-      image: "/work/HSF_isaac_sim.png",
-      projectId: 2,
+      image: "/work/ADSS_CAD_gripper.png",
+      projectId: 3,
     },
   ];
 
