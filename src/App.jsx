@@ -21,8 +21,8 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "Advanced Manufacturing",
-      image: "/work/ECM_schematic.png",
+      title: "Space Robotics",
+      image: "/work/HSF_isaac_sim.png",
       projectId: 2,
     },
   ];
