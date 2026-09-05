@@ -292,8 +292,8 @@ const Portfolio = () => {
             <img
               src={project.image}
               alt={project.title}
-              //className="w-full h-full object-cover"
-              className="w-full h-40 object-contain bg-gray-50"
+              className="w-full h-full object-cover"
+              //className="w-full h-40 object-contain bg-gray-50"
             />
 
             {/* Bottom hover overlay */}
@@ -372,8 +372,8 @@ const Portfolio = () => {
       <img
         src={selectedProject.image}
         alt={selectedProject.title}
-        //className="w-full rounded-lg mb-4"
-        className="w-full rounded-lg mb-3 md:mb-4 object-contain bg-gray-50"
+        className="w-full rounded-lg mb-4"
+        //className="w-full rounded-lg mb-3 md:mb-4 object-contain bg-gray-50"
       />
 
       <p className="text-gray-700 mb-8">
