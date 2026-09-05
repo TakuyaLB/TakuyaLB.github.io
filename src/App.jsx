@@ -210,7 +210,7 @@ const Portfolio = () => {
           </p>
 
           <p>
-            My background is in computer science, having worked on teleoperation systems and with experience in machine learning. However, my skills now encompass a much broader spectrum of the field of robotics, from mechanical design, mechatronics and control all the way up to simulation and reinforcement learning. I am specifically interested in the applications of robotics in aerospace contexts, from robotic cells in aerospace manufacturing to systems designed for space missions such as space-specific manipulators and lunar rovers.
+            My background is in computer science, having published work on teleoperation systems and with experience in machine learning. However, my skills now encompass a much broader spectrum of the field of robotics, from mechanical design, mechatronics and control all the way up to perception, simulation and reinforcement learning. I am specifically interested in the applications of robotics to extreme environments, specifically in space and underwater. From space-specific manipulators and lunar rovers to ROVs and underwater drones, I am looking to explore how robots can operate in the toughest environments known to man.
           </p>
 
           <div className="w-full border-t border-gray-200 my-6" />
@@ -259,9 +259,10 @@ const Portfolio = () => {
             <h2 className="text-lg font-semibold mb-3">Research Interests</h2>
             <ul className="list-disc list-inside space-y-1 text-left">
               <li>Space Robotics</li>
-              <li>Robotic Manipulation</li>
-              <li>Reinforcement Learning</li>
-              <li>Simulation</li>
+              <li>Underwater Robotics</li>
+              <li>Manipulation</li>
+              <li>Perception</li>
+              <li>Autonomous Vehicles</li>
             </ul>
           </div>
         </motion.div>
