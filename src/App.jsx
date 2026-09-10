@@ -22,7 +22,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Space Robotics",
-      image: "/work/ADSS_CAD_gripper.png",
+      image: "/work/ADSS_CAD_visible.png",
       projectId: 3,
     },
   ];
@@ -55,7 +55,7 @@ const Portfolio = () => {
       title: "Autonomous Robotic-Arm Docking System for Spacecraft",
       description: "Intro to Human Spaceflight Project",
       fullDescription: "As space becomes more industrialized, Spacecraft docking remains one of the most precision-demanding operations in human spaceflight, traditionally relying on autonomous guidance, navigation, and control (GNC) systems that consume significant propellant and offer limited abort authority. This paper presents the design and development of an autonomous robotic-arm docking system intended to complement, not replace, the NASA International Docking System Standard (IDSS). Building on the heritage of the Androgynous Peripheral Attach System (APAS) and the Low Impact Docking System (LIDS), the proposed system introduces a Revolute-Prismatic-Revolute (RPR) manipulator arm mounted to the docking port of the host spacecraft, capable of capturing and aligning an approaching vehicle with enhanced control authority and reduced propellant dependence. The system integrates the novel application of safety-constrained reinforcement learning trained in NVIDIA Isaac Sim to achieve robust, adaptive docking behavior transferable from simulation to physical hardware. A prototype implementation using NEMA 17 stepper motors, LX-16A bus servos, a linear actuator, and a Teensy 4.0 serves as the experimental testbed. Results from simulation training demonstrate convergent reward accumulation, validating the reinforcement learning approach prior to hardware deployment. This work addresses critical gaps in current docking infrastructure, including safe abort capability, compatibility across emerging commercial platforms, and reduced reliance on spacecraft GNC during terminal approach.",
-      image: "/images/ADSS_CAD.png",
+      image: "/images/ADSS_CAD_visible.png",
       youtubeId: "/N9cWFjqj4js",
       //codeLink: "https://github.com/RPL-CS-UCL/unity_meta_quest_ros",
       docsLink: "/AERO4810_ADSS.pdf",
