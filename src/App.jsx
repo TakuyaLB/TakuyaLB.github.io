@@ -22,7 +22,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Space Robotics",
-      image: "/work/ADSS_CAD_visible.png",
+      image: "/work/ADSS_CAD_gripper_visible.png",
       projectId: 3,
     },
   ];
