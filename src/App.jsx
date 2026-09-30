@@ -210,7 +210,7 @@ const Portfolio = () => {
           </p>
 
           <p>
-            My background is in computer science, having published work on teleoperation systems and with experience in machine learning. However, my skills now encompass a much broader spectrum of the field of robotics, from mechanical design, mechatronics and control all the way up to perception, simulation and reinforcement learning. I am specifically interested in the applications of robotics to extreme environments, specifically in space and underwater. From space-specific manipulators and lunar rovers to ROVs and underwater drones, I am looking to explore how robots can operate in the toughest environments known to man.
+            My background is in computer science, having published work on teleoperation systems and with experience in machine learning. However, my skills now encompass a much broader spectrum of the field of robotics, from mechanical design, mechatronics and control all the way up to perception, simulation and reinforcement learning. I have two specific interests; humanoids and the applications of robotics to extreme environments. I have experience in both legged locomotion and manipulation, and humanoids are the one type of robot where I can apply my broad set of skills to exciting advancements in both tasks. For extreme environments, I am focused on space and underwater. From space-specific manipulators and lunar rovers to ROVs and underwater drones, I am looking to explore how robots can operate in the toughest environments known to man.
           </p>
 
           <div className="w-full border-t border-gray-200 my-6" />
@@ -258,10 +258,9 @@ const Portfolio = () => {
           <div className="w-full flex flex-col items-center md:items-start">
             <h2 className="text-lg font-semibold mb-3">Research Interests</h2>
             <ul className="list-disc list-inside space-y-1 text-left">
+              <li>Humanoids</li>
               <li>Space Robotics</li>
               <li>Underwater Robotics</li>
-              <li>Manipulation</li>
-              <li>Perception</li>
               <li>Autonomous Vehicles</li>
             </ul>
           </div>
