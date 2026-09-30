@@ -58,7 +58,7 @@ const Portfolio = () => {
       image: "/images/ADSS_CAD_visible.png",
       youtubeId: "/N9cWFjqj4js",
       //codeLink: "https://github.com/RPL-CS-UCL/unity_meta_quest_ros",
-      docsLink: "/AERO4810_ADSS.pdf",
+      docsLink: "work/AERO4810_ADSS.pdf",
       //paperPdf: "https://arxiv.org/pdf/2504.15229", // 👈 NEW
     },
     {
