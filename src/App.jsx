@@ -166,7 +166,7 @@ const Portfolio = () => {
               {
                 icon: FileText,
                 label: "CV",
-                href: "/Takuya_CV.pdf",
+                href: "/Takuya_CV_full_stack.pdf",
                 hover: "hover:text-red-600",
               },
             ].map(({ icon: Icon, label, href, hover }, i) => (
